@@ -5,12 +5,12 @@ import 'package:lesson8/statefull.dart';
 class Counter extends Statefull {
   @override
   State<StatefulWidget> createState() {
-    return super.createState();
+    return _StatefullState();
   }
 }
 
  class _StatefullState extends State<Statefull>{
-int counter = 45;
+  int counter=11;
 @override
 Widget build(BuildContext context) {
   return Scaffold(
@@ -18,6 +18,7 @@ Widget build(BuildContext context) {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        Text('counter: $counter'),
         ElevatedButton(onPressed: add, child: Text('+')),
         ElevatedButton(onPressed: add2, child: Text('+2')),
         ElevatedButton(onPressed: add3, child: Text('+3')),
@@ -30,25 +31,19 @@ Widget build(BuildContext context) {
   );
 }
 void add(){
-if (counter>0) {
   setState((){
     counter++;
   });
 }
-}
 void add2(){
-  if (counter>0) {
     setState(() {
       counter+=2;
     });
-  }
 }
 void add3(){
-  if (counter>0) {
     setState(() {
       counter+=3;
     });
-  }
 }
 void minus(){
   if (counter>0) {
@@ -72,8 +67,10 @@ void minus3(){
   }
 }
 void reset(){
-  if (counter>0) {
-    counter=0;
+  if (counter > 0) {
+    setState(() {
+    counter = 0;
+    });
   }
 }
 }
