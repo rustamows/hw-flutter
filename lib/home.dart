@@ -8,11 +8,12 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
              IconButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfilePage()));}, icon:  Image.asset('TopBar.png'),),
             ],
           ),
-          Row(
+          Row(mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('FullFoodimage.png'),
             ],
