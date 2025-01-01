@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
           ),
           Row(
             children: [
+              SizedBox(width: 20,),
               Image.asset('FoodDetails.png'),
             ],
           ),
